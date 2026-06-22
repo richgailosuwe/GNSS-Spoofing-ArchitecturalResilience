@@ -1,0 +1,9 @@
+data/raw/
+results/
+*.mat
+*.ubx
+*.obs
+*.nav
+*.gz
+Citations- why certain values were used in code
+New Text Document
