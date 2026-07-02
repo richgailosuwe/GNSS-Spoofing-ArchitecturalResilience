@@ -6,3 +6,9 @@ stage0_osnma/keys/
 __pycache__/ 
 _archive_unused/  
 results/figures/ 
+engine to reload everything.mat
+loadfiles.mat
+matlab-rinex file extraction.mat
+ekf_authentic_full.mat
+THESIS_CODE_ANNEX.docx
+THESIS_CODE_ANNEX.md
