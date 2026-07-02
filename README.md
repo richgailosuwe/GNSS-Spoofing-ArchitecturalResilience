@@ -233,9 +233,7 @@ The full PDF of my Bachelor's thesis can be accessed through Microsoft Onedrive,
 
 ## License
 
-This project is intended to be released under the MIT License.
+## License
 
-Add the standard `LICENSE` file at the repository root:
-
-`LICENSE`
+This project is released under the MIT License, which can be found in [LICENSE](LICENSE) .
 
