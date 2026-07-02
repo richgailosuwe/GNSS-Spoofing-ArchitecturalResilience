@@ -39,7 +39,7 @@ The pipeline is organized into five stages:
 - The mitigated pipeline keeps position error bounded under the tested spoofing attacks, while the unmitigated solution can drift by tens to hundreds of metres.
 - The final transmit-time WLS model generalizes to independent standalone ZED-F9P recordings with metre-level stability about session mean.
 
-## Scope and Honesty Notes
+## Scope Notes
 
 This repository is a research prototype, not a certified aviation product.
 
