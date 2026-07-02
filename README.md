@@ -1,6 +1,6 @@
-# Architecting a Layered, Resilient GNSS System for Assured Navigation
+# Architecting a Layered, Resilient GNSS: A Paradigm Shift from Detection to System Assurance
 
-This repository contains the MATLAB implementation of a layered GNSS spoofing-resilience architecture developed for a civil-aviation-oriented thesis project. The work is centered on a shift from spoofing *detection* alone toward *bounded navigation assurance*: identifying anomalous measurements, keeping the position solution bounded under attack, and reporting an experimental protection metric alongside the recovered solution.
+This repository contains the MATLAB implementation of a layered GNSS spoofing-resilience architecture developed for a civil-aviation-oriented Bachelor's thesis project. The work is centered on a shift from spoofing *detection* alone toward *bounded navigation assurance*: identifying anomalous measurements, keeping the position solution bounded under attack, and reporting an experimental protection metric alongside the recovered solution.
 
 The implementation targets multi-constellation GNSS with GPS, Galileo, BeiDou, and GLONASS, and combines anomaly monitoring, identification, measurement handling, and state estimation in one end-to-end pipeline.
 
@@ -51,51 +51,111 @@ This repository is a research prototype, not a certified aviation product.
 
 ## Pipeline Architecture
 
-Place your architecture figure at:
 
-`docs/pipeline_architecture.png`
+<img width="6268" height="4876" alt="gnss_pipeline_architecture2 drawio" src="https://github.com/user-attachments/assets/2d38d367-9637-42d1-9617-4740e8bdce52" />
 
-Then it will render here:
-
-![Pipeline architecture](docs/pipeline_architecture.png)
 
 ## Repository Structure
 
 ```text
-MATLAB IMPLEMENTATION/
-|-- config.m                         # Central configuration: paths, thresholds, scenarios, EKF and integrity settings
-|-- main.m                           # Default entry point (Scenario 1, verbose)
-|-- run_pipeline.m                   # Full Stage 0-4 pipeline runner for one scenario
-|-- run_all_scenarios.m              # Batch execution of all configured spoofing scenarios
-|-- run_ablation.m                   # Ablation study runner (full / gate-only / unmitigated)
-|-- run_baseline_authentic.m         # Authentic no-attack baseline evaluation
-|-- run_real_authentic_validation.m  # Real-hardware WLS/EKF consistency validation
-|-- validate_1hz_profile.m           # 1 Hz hardware EKF feasibility validation
-|-- generate_all_figures.m           # Regenerates thesis/result figures from saved evidence
+|-- utils/
+|   Shared GNSS data readers, orbit/measurement models, coordinate tools, WLS solver, and spoofing injector.
+|
+|   |-- rinex_read_obs.m
+|   |   Reads RINEX observation files and extracts pseudorange, carrier phase, Doppler, and C/N0 fields.
+|   |
+|   |-- rinex_read_nav.m
+|   |   Reads RINEX navigation files and extracts broadcast ephemerides.
+|   |
+|   |-- sat_position.m
+|   |   Computes satellite ECEF position and clock correction for GPS, Galileo, BeiDou, and GLONASS.
+|   |
+|   |-- corrected_pseudorange.m
+|   |   Main corrected measurement model: transmit-time position, clock, Sagnac, ionosphere, troposphere, and group delay.
+|   |
+|   |-- pseudorange_correct.m
+|   |   Legacy correction helper retained for diagnostics and comparison tests.
+|   |
+|   |-- get_group_delay.m
+|   |   Returns GPS TGD or Galileo/BeiDou BGD group-delay correction in metres.
+|   |
+|   |-- wls_solver.m
+|   |   Iterative weighted least-squares solver for snapshot GNSS position and receiver clock.
+|   |
+|   |-- ecef2lla_simple.m
+|   |   Converts ECEF coordinates to WGS84 geodetic latitude, longitude, and altitude.
+|   |
+|   |-- coord_convert.m
+|   |   Central coordinate-conversion utility for ECEF, LLA, ENU, and distance operations.
+|   |
+|   |-- inject_spoofing.m
+|   |   Generates geometry-consistent drag-off spoofed pseudoranges using exact range-difference injection.
+|   |
+|   |-- ionofree_combination.m
+|   |   Computes ionosphere-free dual-frequency pseudorange combinations.
+|   |
+|   |-- test_corrected_pseudorange.m
+|   |   Validates transmit-time and group-delay corrected pseudorange behaviour.
+|   |
+|   |-- test_group_delay_bgd.m
+|   |   Tests group-delay and Galileo BGD band-selection logic.
+|   |
+|   |-- test_injection_geometry.m
+|   |   Verifies that the spoofing injector produces the intended geometric displacement.
+|   |
+|   |-- test_sagnac_fix.m
+|   |   Tests Sagnac correction magnitude and positioning effect.
+|   |
+|   `-- calibration/
+|       Satellite residual-bias calibration helpers.
+|       |
+|       |-- calibrate_sat_bias.m
+|       |   Calibrates satellite-specific residual bias corrections.
+|       |
+|       `-- apply_sat_bias.m
+|           Applies calibrated satellite bias corrections.
 |
 |-- Data/
-|   |-- raw/                         # Raw authentic, spoofed, and hardware captures
-|   |-- reference/                   # Reference/supporting data
-|   `-- rinex/                       # RINEX observation/navigation/hardware data
+|   Input data used by the pipeline.
 |
-|-- stage0_osnma/                    # Galileo OSNMA parsing, crypto, and status utilities
-|-- stage1_detection/                # Stage 1 anomaly detectors and fusion
-|-- stage2_identification/           # RAIM-FDE, inter-constellation checks, classification
-|-- stage3_exclusion/                # Exclusion mask, innovation gate, Stage 3 tests
-|-- stage4_recovery/                 # EKF, ISB model, HPL, recovery tests and calibration
-|-- utils/                           # Shared GNSS utilities, measurement model, spoof injector
-|-- tests/                           # Additional supporting tests
+|   |-- raw/
+|   |   Raw authentic, spoofed, and hardware captures.
+|   |
+|   |-- rinex/observation/
+|   |   Authentic BUCU RINEX observation files.
+|   |
+|   |-- rinex/navigation/
+|   |   Authentic BUCU RINEX navigation files.
+|   |
+|   |-- rinex/hardware/
+|   |   Hardware RINEX recordings from ZED-F9P sessions.
+|   |
+|   `-- reference/
+|       Supporting reference inputs used by calibration and validation utilities.
 |
-|-- results/
-|   |-- ablation/                    # Saved ablation outputs
-|   |-- calibration/                 # Calibration outputs
-|   |-- figures/                     # Thesis figures and diagnostics
-|   |-- hardware/                    # Saved hardware validation outputs
-|   |-- logs/                        # Calibration and audit logs
-|   |-- pvt/                         # Saved pipeline outputs
-|   `-- simulated_scenarios/         # Saved spoofed scenario datasets
-|
-`-- docs/                            # Recommended location for thesis PDF and architecture figures
+`-- results/
+    Saved outputs, figures, calibrations, and scenario evidence.
+    |
+    |-- pvt/
+    |   Saved pipeline outputs for each scenario and batch summaries.
+    |
+    |-- ablation/
+    |   Saved A/B/C mitigation ablation outputs.
+    |
+    |-- figures/
+    |   Thesis figures and supporting diagnostics.
+    |
+    |-- hardware/
+    |   Saved hardware validation outputs and 1 Hz cross-validation results.
+    |
+    |-- logs/
+    |   Calibration logs, audits, and provenance summaries.
+    |
+    |-- calibration/
+    |   Saved calibration products and intermediate statistics.
+    |
+    `-- simulated_scenarios/
+        Saved spoofed observation sets and scenario-specific evidence.
 ```
 
 ## How to Run
@@ -165,25 +225,11 @@ This part of the work supports the claim that the transmit-time WLS measurement 
 
 ## Thesis Document
 
-Place the final thesis PDF at:
+The full PDF of my Bachelor's thesis can be accessed through Microsoft Onedrive, using the link below
 
-`docs/thesis.pdf`
+[Read the full thesis](https://1drv.ms/b/c/9b41f5afb01ac702/IQD8E81WXcPSQLjELWBqDLKnAY_53BUUrdwkQvsIUrkNwbw?e=3BgyZl)
 
-Then reference it here:
 
-[Read the full thesis](docs/thesis.pdf)
-
-If you prefer controlled access instead of direct public download, replace that link with your request form or hosted access page.
-
-## Figures and QR Code
-
-The repository can include public-facing assets such as:
-
-- pipeline architecture diagram
-- key result figures
-- GitHub QR code
-
-For example, the current QR image in the root can be moved to `docs/` and linked here if desired.
 
 ## License
 
@@ -193,6 +239,3 @@ Add the standard `LICENSE` file at the repository root:
 
 `LICENSE`
 
-## Citation
-
-Formal academic references are intentionally kept in the thesis PDF rather than duplicated in the README. If you want others to cite the work, add a short citation block here later with the thesis title, author, institution, and year.
