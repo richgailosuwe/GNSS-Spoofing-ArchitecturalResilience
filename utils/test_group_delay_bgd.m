@@ -15,8 +15,6 @@ function test_group_delay_bgd()
 % deterministic (the authentic file has both F/NAV and I/NAV rows at the
 % same Toe for a given PRN).
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     PROJECT_ROOT = 'C:\Users\RG\Documents\MATLAB\MATLAB IMPLEMENTATION';
     addpath(PROJECT_ROOT);

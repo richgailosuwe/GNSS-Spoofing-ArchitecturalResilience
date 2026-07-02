@@ -37,8 +37,6 @@ function hpl = compute_hpl(pos_ecef, P_pos_ecef, K_H)
 %   RTCA DO-229 (WAAS MOPS), horizontal protection level (d_major form);
 %   Walter & Enge (1995), Weighted RAIM for Precision Approach.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (integrity metric)
 
     if nargin < 3 || isempty(K_H)

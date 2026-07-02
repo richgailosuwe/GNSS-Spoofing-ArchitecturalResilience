@@ -48,8 +48,6 @@
 %   This keeps the test runtime to ~minutes rather than hours.
 %   Full 2880-epoch validation is a Chapter 6 result, not a unit test.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery
 
 fprintf('\n=== test_stage4_integration.m ===\n');

@@ -68,8 +68,6 @@ function pr_if = ionofree_combination(pr_L1, pr_L2, constellation)
 %   pr_if          double or [Nx1] — ionosphere-free pseudorange [m]
 %                  Returns NaN if either input is NaN (propagates missing data).
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (measurement model enhancement)
 
     switch constellation

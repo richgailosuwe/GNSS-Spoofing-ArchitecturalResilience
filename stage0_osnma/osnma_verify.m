@@ -69,8 +69,6 @@ function status = osnma_verify(ubx_filepath, keys_dir, cfg)
 %     .sv_status        struct array — per-SV authentication results
 %     .error_log        cell — any warnings/errors encountered
 %
-% PROJECT:  GNSS Thesis — Stage 0 OSNMA
-% AUTHOR:   RG
 
     %% --- Initialise output -----------------------------------------------
     status.auth_status     = 'AUTH_UNKNOWN';

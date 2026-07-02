@@ -46,8 +46,6 @@
 %   (ionofree_combination returns NaN, which is filtered).  The reported
 %   n_sats_used may therefore be lower for the IF case than the L1 case.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (measurement model enhancement)
 
 fprintf('\n=== test_ionofree.m ===\n');

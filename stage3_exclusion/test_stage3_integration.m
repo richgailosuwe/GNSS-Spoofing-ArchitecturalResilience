@@ -34,8 +34,6 @@
 %   Pseudoranges computed as geometric range + known clock bias (50m).
 %   Expected WLS output: position error < 1e-4 m, clock recovery within 1 cm.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    3 -- Integration
 
 fprintf('\n=== test_stage3_integration.m ===\n');

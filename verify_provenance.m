@@ -18,8 +18,6 @@ function verify_provenance()
 %
 % Run from project root after regeneration (Task 4).
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     config;   % needs cfg.root only
 

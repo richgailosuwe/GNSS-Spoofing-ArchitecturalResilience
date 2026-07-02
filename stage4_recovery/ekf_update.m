@@ -41,8 +41,6 @@ function [x_upd, P_upd, update_result] = ekf_update(x_pred, P_pred, ...
 % OUTPUTS
 %   x_upd, P_upd, update_result   (fields unchanged from the original API)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery
 
     n_states = numel(x_pred);

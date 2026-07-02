@@ -31,8 +31,6 @@ function test_isb_reproduction(obs, nav, cfg)
 %   Run main.m or config first to set paths and load obs/nav/cfg, then:
 %     >> test_isb_reproduction(obs, nav, cfg)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (ISB diagnostic)
 
     fprintf('\n=== test_isb_reproduction.m (expected to FAIL — demonstrates the bug) ===\n');

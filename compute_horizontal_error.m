@@ -5,7 +5,6 @@ function compute_horizontal_error(scenario_name)
 %
 %   compute_horizontal_error('baseline')
 %   compute_horizontal_error('scenario_1_gps')
-% AUTHOR: RG
 
     if nargin < 1, scenario_name = 'baseline'; end
     config; cfg.verbose = false;

@@ -12,8 +12,6 @@
 % Test 0 is a regression test for the original bug: obs struct with NO .weight
 % field (as returned by rinex_read_obs) must not crash the function.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 fprintf('\n=== test_apply_exclusion_mask.m ===\n');
 

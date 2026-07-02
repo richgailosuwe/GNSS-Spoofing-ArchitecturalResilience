@@ -9,8 +9,6 @@ function diagnose_epoch(scenario_id, target_epoch)
 % survived, and the attack type. Used to root-cause the A>B anomaly where the
 % full pipeline (exclusion ON) does worse than gate-only.
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     run('config.m');
     cfg.verbose = false;

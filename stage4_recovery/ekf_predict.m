@@ -25,8 +25,6 @@ function [x_pred, P_pred] = ekf_predict(x, P, cfg)
 % Justification for constant-velocity model and discrete Q approximation:
 %   Groves (2013), Sections 9.4.2 and 3.4.  Joseph-form symmetrisation: 3.2.1.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery
 
     dt       = cfg.ekf.dt;     % 30.0 s

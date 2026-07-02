@@ -33,8 +33,6 @@
 %     — this characterises HOW OFTEN the bias table needs recalibration,
 %     which is a thesis finding (Chapter 6) regardless of the result.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (calibration validation)
 
 fprintf('\n=== test_sat_bias_calibration.m ===\n');

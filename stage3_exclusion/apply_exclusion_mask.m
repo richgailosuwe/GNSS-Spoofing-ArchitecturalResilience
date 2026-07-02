@@ -78,8 +78,6 @@ function obs_masked = apply_exclusion_mask(obs_epoch, classify_result, cfg)
 %                     .n_spoofed_post_mask    double
 %                     .mask_log               struct -- per-satellite action record
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    3 -- Measurement Exclusion
 
     %% --- Parameter defaults ---------------------------------------------------

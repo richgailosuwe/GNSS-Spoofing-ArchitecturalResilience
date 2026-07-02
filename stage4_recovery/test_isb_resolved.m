@@ -27,8 +27,6 @@ function test_isb_resolved(obs, nav, cfg)
 %   config; obs = rinex_read_obs(...); nav = rinex_read_nav(...);
 %   test_isb_resolved(obs, nav, cfg)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (ISB verification)
 
     fprintf('\n=== test_isb_resolved.m (expected to PASS — ISB modelled out) ===\n');

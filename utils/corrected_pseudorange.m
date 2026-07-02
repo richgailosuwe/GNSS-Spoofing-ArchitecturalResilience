@@ -40,8 +40,6 @@ function [pr_corr, sat_pos_tx, sat_clk] = corrected_pseudorange( ...
 %   sat_pos_tx  [3x1] satellite ECEF position at transmit time (metres)
 %   sat_clk     satellite clock correction at transmit time (metres)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
     C_LIGHT = 299792458.0;
 

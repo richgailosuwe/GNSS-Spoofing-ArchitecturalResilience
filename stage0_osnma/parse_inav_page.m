@@ -48,8 +48,6 @@ function page = parse_inav_page(dwrd, sv_id)
 %                                   24-bit CRC requires both page parts)
 %     .all_bits       char [256x1]  full bit string for debugging
 %
-% PROJECT:  GNSS Thesis — Stage 0 OSNMA
-% AUTHOR:   RG
 
     % Build full 256-bit string (MSB-first per word, verified from data)
     all_bits = '';

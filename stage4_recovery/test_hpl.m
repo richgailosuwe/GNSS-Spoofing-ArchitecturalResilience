@@ -21,8 +21,6 @@ function test_hpl()
 %                WAAS MOPS / DO-229 NPA value; NOT a certified precision-
 %                approach or RNP AR allocation).
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (integrity metric)
 
     fprintf('\n=== TEST_HPL ===\n');

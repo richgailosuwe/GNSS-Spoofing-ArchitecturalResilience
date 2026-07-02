@@ -47,8 +47,6 @@ function generate_all_figures()
 % generated here — it recomputes from a special position-drag injection path
 % and should be run separately/interactively. This wrapper only uses saved PVT.
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     config;
     REF_SCALE = 185.2;     % RNP-0.1 reference scale [m] (descriptive)

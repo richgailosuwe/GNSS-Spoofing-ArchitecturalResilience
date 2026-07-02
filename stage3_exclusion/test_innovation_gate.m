@@ -14,8 +14,6 @@
 %   Bar-Shalom, Y., Li, X.R., & Kirubarajan, T. (2001). Estimation with
 %   Applications to Tracking and Navigation. Wiley, Section 1.4.3.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 fprintf('\n=== test_innovation_gate.m ===\n');
 

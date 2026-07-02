@@ -91,8 +91,6 @@ function osnma_result = osnma_status(obs_epoch, cfg)
 %   before RAIM-FDE and inter-constellation checks run.
 %   This is the integration point described in Chapter 4, Section 4.1.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    0 — OSNMA Cryptographic Authentication
 
     %% --- Validate mode -------------------------------------------------------

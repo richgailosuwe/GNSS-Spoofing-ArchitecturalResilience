@@ -2,7 +2,6 @@ function integrity_table()
 % INTEGRITY_TABLE  Read-only pull of the exact numbers for thesis 6.2 + 6.5.
 % For baseline + all 5 scenarios: HPL median/p95/max, coasting count, and
 % count (epochs where HORIZONTAL EN error > HPL — should be 0). No rerun.
-% AUTHOR: RG
 
     config; cfg.verbose = false;
     ref = cfg.ref_pos(:)';

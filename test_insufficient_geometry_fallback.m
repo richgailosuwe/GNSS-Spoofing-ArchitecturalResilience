@@ -28,8 +28,6 @@ function test_insufficient_geometry_fallback()
 % config is called as a script statement (config;) NOT run('config.m'): run()
 % uses evalin which trips the static-workspace rule when local functions exist.
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     PROJECT_ROOT = 'C:\Users\RG\Documents\MATLAB\MATLAB IMPLEMENTATION';
     cd(PROJECT_ROOT); config; cfg.verbose = false;

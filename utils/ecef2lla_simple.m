@@ -22,8 +22,6 @@ function [lat, lon, alt] = ecef2lla_simple(pos)
 % REFERENCE
 %   WGS84 datum; Bowring (1976) iterative geodetic latitude solution.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
     % --- WGS84 ellipsoid constants ---
     a  = 6378137.0;             % semi-major axis [m]

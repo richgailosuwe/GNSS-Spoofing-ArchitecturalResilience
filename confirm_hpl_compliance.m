@@ -9,7 +9,6 @@ function confirm_hpl_compliance(scenario_name)
 %   confirm_hpl_compliance('scenario_4_gps_glonass')
 %   confirm_hpl_compliance('scenario_5_gps_galileo')
 %   (run for all five to fill the HPL table)
-% AUTHOR: RG
 
     if nargin < 1, scenario_name = 'scenario_4_gps_glonass'; end
     config; cfg.verbose = false;

@@ -25,11 +25,11 @@ function ekf_out = ekf_runner(obs, nav, classify_results, cfg)
 %   zero with cfg.ekf.P_init_isb uncertainty.
 %
 % PIPELINE PER EPOCH (epochs 2+):
-%   1. ekf_predict          — propagate state and covariance by dt
+%   1. ekf_predict — propagate state and covariance by dt
 %   2. Assemble obs_epoch   — collect corrected pseudoranges + sat positions
 %   3. apply_exclusion_mask — apply Stage 2 trust weights
 %   4. innovation_gate (scalar) — isolate individual bad measurements
-%   5. ekf_update           — Kalman update on accepted measurements only
+%   5. ekf_update  — Kalman update on accepted measurements only
 %
 % CONSTELLATIONS:
 %   All four constellations (GPS, Galileo, BeiDou, GLONASS) used when
@@ -58,8 +58,6 @@ function ekf_out = ekf_runner(obs, nav, classify_results, cfg)
 %               .coasted     [Ex1] logical — epoch coasted on prediction
 %               .epoch_log   [Ex1] struct array — full per-epoch detail
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery
 
     %% --- Setup --------------------------------------------------------------

@@ -2,7 +2,6 @@ function confirm_hardware_scatter()
 % CONFIRM_HARDWARE_SCATTER  Read-only: compute WLS scatter about session mean
 % for all three hardware sessions, BOTH 3D and horizontal EN, so the thesis
 % cites them on a consistent, correctly-labelled metric. No rerun.
-% AUTHOR: RG
 
     config; cfg.verbose = false;
     hw = fullfile(cfg.root,'results','hardware');

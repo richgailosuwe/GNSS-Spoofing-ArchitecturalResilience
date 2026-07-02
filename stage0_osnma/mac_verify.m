@@ -62,8 +62,6 @@ function [verified, computed_tag] = mac_verify(nav_data_bits, tag_received, ...
 %   specification. This separation keeps mac_verify.m testable in isolation
 %   against the Annex A test vectors in the OSNMA Receiver Guidelines.
 %
-% PROJECT:  GNSS Thesis — Stage 0 OSNMA
-% AUTHOR:   RG
 
     if nargin < 5, mac_function = 0; end  % default HMAC-SHA-256
 

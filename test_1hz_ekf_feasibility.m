@@ -19,7 +19,6 @@ function test_1hz_ekf_feasibility(obs_path)
 %       -> needs full calibration (R-from-residuals, covariance floor, Doppler);
 %          scope as future work, finalise on the WLS result.
 %
-% AUTHOR: RG (GNSS thesis)
 
     run('config.m'); cfg.verbose = false;
     addpath(fullfile(cfg.root,'utils'));

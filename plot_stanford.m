@@ -43,8 +43,6 @@
 %   - Figure saved to results/figures/stanford_diagram.png (300 dpi)
 %   - Bounding statistics printed to the command window for the thesis.
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:  RG
 
 %% --- Integrity limits ---------------------------------------------------
 RNP_ACCURACY = 185.2;    % 0.1 NM lateral accuracy scale [m]

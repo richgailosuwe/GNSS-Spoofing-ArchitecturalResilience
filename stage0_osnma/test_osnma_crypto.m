@@ -19,8 +19,6 @@
 %   Test 2 -- TESLA K1 -> K0/KROOT (Section A.5.2, step 2)
 %   Test 3 -- Tag0 MAC verification (Section A.6.5.1, ADKD0, K4)
 %
-% PROJECT:  GNSS Thesis -- Stage 0 OSNMA
-% AUTHOR:   RG
 
 fprintf('\n=== test_osnma_crypto.m ===\n');
 fprintf('Source: EUSPA OSNMA Receiver Guidelines v1.3, Annex A\n\n');

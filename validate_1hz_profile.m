@@ -10,7 +10,6 @@ function validate_1hz_profile(q_mult, obs_path)
 % q_mult : the FROZEN process-noise multiplier selected on the tuning session.
 %
 % EXPERIMENTAL — does not modify config.m or the validated pipeline.
-% AUTHOR: RG (GNSS thesis)
 
     if nargin < 1 || isempty(q_mult)
         error('Provide the locked Q multiplier, e.g. validate_1hz_profile(1000).');

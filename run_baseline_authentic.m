@@ -12,7 +12,6 @@ function baseline = run_baseline_authentic(verbose)
 %
 % Usage:  run_baseline_authentic        % quiet
 %         run_baseline_authentic(true)  % verbose
-% AUTHOR: RG
 
     if nargin < 1, verbose = true; end
     run('config.m');

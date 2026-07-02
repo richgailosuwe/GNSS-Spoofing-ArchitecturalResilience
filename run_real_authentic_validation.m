@@ -22,8 +22,6 @@ function results = run_real_authentic_validation(obs_path)
 %   2. Domnesti football-pitch fallback (only if header field missing)
 %   3. BUCU cfg.ref_pos (last resort seed only)
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     run('config.m');
     cfg.verbose = false;

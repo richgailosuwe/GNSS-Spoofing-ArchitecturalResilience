@@ -49,8 +49,6 @@ function gd_metres = get_group_delay(nav, prn, constellation, t)
 %   Mirrors sat_position/select_ephemeris so the group delay comes from the
 %   SAME broadcast record used for satellite position and clock.
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
     C_LIGHT = 299792458.0;
     gd_metres = 0.0;

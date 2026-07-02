@@ -56,8 +56,6 @@ function [verified, key_verified] = tesla_key_chain(K_I, GST_SF, alpha, K_J, key
 %   [ok, K2_comp] = tesla_key_chain(K2_received, GST_SF_3, alpha, K3_verified, 128);
 %   if ok, disp('K2 verified'); end
 %
-% PROJECT:  GNSS Thesis — Stage 0 OSNMA
-% AUTHOR:   RG
 
     key_size_bytes = ceil(key_size_bits / 8);
 

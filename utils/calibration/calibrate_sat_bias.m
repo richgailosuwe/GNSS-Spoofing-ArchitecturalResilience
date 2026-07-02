@@ -67,8 +67,6 @@ function bias_table = calibrate_sat_bias(obs, nav, cfg, epoch_range, constellati
 %     .epoch_range     the input epoch_range (for provenance)
 %     .calibration_date char — timestamp of when this was computed
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (calibration utility)
 
     noise_map = struct( ...

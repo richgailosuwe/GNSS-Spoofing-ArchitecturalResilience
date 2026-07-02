@@ -81,8 +81,6 @@ function gate_result = innovation_gate(innovation, H, P, R, cfg)
 %     .n_rejected         double
 %     .gate_mode          char
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    3 — Measurement Exclusion
 
     %% --- Validate inputs ------------------------------------------------------

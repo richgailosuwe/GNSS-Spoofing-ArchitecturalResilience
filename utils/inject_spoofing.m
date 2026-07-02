@@ -36,8 +36,6 @@ function obs_spoofed = inject_spoofing(obs, nav, cfg)
 %     obs_spoofed - modified observation struct,
 %                   saved to results/simulated_scenarios/<scenario_name>/
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 %% ── COPY AUTHENTIC OBS ───────────────────────────────────────────────────
 obs_spoofed = obs;

@@ -5,8 +5,6 @@
 %
 % Expected result: PASS (4/4)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 fprintf('\n=== test_osnma.m ===\n');
 clear

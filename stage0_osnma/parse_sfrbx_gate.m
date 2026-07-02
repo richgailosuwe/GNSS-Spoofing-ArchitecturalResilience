@@ -62,8 +62,6 @@ function result = parse_sfrbx_gate(ubx_filepath, n_pages)
 %   [GAL-ICD]  Galileo OS SIS ICD, Issue 2.1 — I/NAV page structure
 %   [OSNMA-ICD] EUSPA OSNMA SIS ICD v1.1 — OSNMA field in I/NAV
 %
-% PROJECT:  GNSS Thesis — Stage 0 OSNMA Implementation
-% AUTHOR:   RG
 
     if nargin < 2, n_pages = 20; end
 

@@ -21,8 +21,6 @@ function results = run_ablation(scenario_id)
 %
 % Requires: cfg.stage3.use_innovation_gate flag support in ekf_runner.m.
 %
-% PROJECT: GNSS Thesis MATLAB Implementation, UPB
-% AUTHOR:  RG
 
     if nargin < 1, scenario_id = 1; end
 

@@ -21,8 +21,6 @@
 %   claim. HPL is computed with a conservative RAIM-style multiplier
 %   (K_H = 6.18) and is not a certified protection level.
 %
-% PROJECT:  GNSS Thesis, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 clc;
 fprintf('========================================\n');

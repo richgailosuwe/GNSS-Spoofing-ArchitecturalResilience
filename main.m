@@ -17,8 +17,6 @@
 %   4 = scenario_4_gps_glonass   GPS + GLONASS
 %   5 = scenario_5_gps_galileo   GPS + Galileo (stress test)
 %
-% PROJECT:  GNSS Thesis, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 clc; clear; close all;
 run_pipeline(1, true);

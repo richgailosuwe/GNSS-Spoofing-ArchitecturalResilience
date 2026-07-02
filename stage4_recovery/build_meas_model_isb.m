@@ -37,8 +37,6 @@ function [H, pr_pred, isb_col_per_row] = build_meas_model_isb(sat_positions, con
 %   pr_pred         [m x 1] predicted pseudorange (incl. clk and ISB)
 %   isb_col_per_row [m x 1] ISB state-column index used by each row (0 = none)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    4 — EKF Position Recovery (ISB measurement model)
 
     n_meas   = size(sat_positions, 1);

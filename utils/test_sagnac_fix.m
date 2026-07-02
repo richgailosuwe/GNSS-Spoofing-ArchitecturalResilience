@@ -41,8 +41,6 @@
 %     3D ~ sqrt(4.2^2+2.8^2+8.4^2) ~ 9.7m; 20m gives generous margin for
 %     WLS vs RTKLIB's Kalman-filtered estimator and different sat subsets).
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 % STAGE:    Utility fix — pseudorange_correct.m Sagnac correction
 
 fprintf('\n=== test_sagnac_fix.m ===\n');

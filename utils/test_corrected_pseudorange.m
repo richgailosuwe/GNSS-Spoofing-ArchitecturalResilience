@@ -27,8 +27,6 @@ function test_corrected_pseudorange(obs, nav, cfg)
 %   config; obs = rinex_read_obs(...); nav = rinex_read_nav(...);
 %   test_corrected_pseudorange(obs, nav, cfg)
 %
-% PROJECT:  GNSS Thesis MATLAB Implementation, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
     fprintf('\n=== test_corrected_pseudorange.m (attribution + seed robustness) ===\n');
 

@@ -21,8 +21,6 @@ function pipeline_result = run_pipeline(scenario_id, verbose)
 %   4 = scenario_4_gps_glonass   GPS + GLONASS
 %   5 = scenario_5_gps_galileo   GPS + Galileo (stress test)
 %
-% PROJECT:  GNSS Thesis, Universitatea Politehnica Bucuresti
-% AUTHOR:   RG
 
 %% ── ARGUMENTS ─────────────────────────────────────────────────────────────
 if nargin < 1, scenario_id = 1; end
